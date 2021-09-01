@@ -54,10 +54,10 @@
                        min_weight_fraction_leaf=0.0, presort='deprecated',
                        random_state=12345, splitter='best')
 
-**Quantitative Analysis
+**Quantitative Analysis**
 ![](download.png)
 
-**Ethical considerations
+**Ethical considerations**
 - Describe potential negative impacts of using the model:
   - The model will not work effectively on Safari. User shall use Google Chrome.
   - Real-world risks: even though this model framework is consistent this is for academic purpose. It cannot be use for real-world environment.
