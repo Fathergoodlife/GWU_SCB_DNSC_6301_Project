@@ -1,17 +1,17 @@
 # GWU_SCB_DNSC_6301_Project
 
-Bascis Information
+**Bascis Information**
 - Person or organization developinhg model: Group 6 - Sekou Cheick Bamba
 - Model Date: August 2021
 - Model version: 1.0
-- Model implementation code: SCB_GWU.ipynb
+- Model implementation code: [SCB_GWU.ipynb](SCB_GWU.ipynb])
 
-Intended Use
+**Intended Use**
 - Primary intended uses: This model is an example probability of default classifier, with an example use case for determining eligibility for a credit line increase.
 - Primary intended users: Students in GWU DNSC 6301 Bootcamp and MBA Data Analytics.
 - Out-of-scope use cases: Any use beyond an eduacational example is out-of-scope.
 
-Training Data:
+**Training Data**:
 - Data dictionary:
 
 | Name | Modeling Role | Measurement Level| Description|
@@ -35,8 +35,33 @@ Training Data:
   - Training rows: 15,000
   - Validation rows: 7,500
 
-Test Data
+**Test Data**
 - Source of test data: GWU Blackboard, email scbamba@gwu.edu for more information
 - Number of rows in test data: 7,500
 - State any differences in columns between training and test data: None
-- State any issue: this code will not run effectively on Safari. Google Chrome is advised
+- State any differences in rows between training and test data: 15,000 rows for training and 7,500 for test data.
+
+**Model Details**
+- Columns used as inputs in the final model: ['LIMIT_BAL', 'PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1', 'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6', 'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6']
+- Column(s) used as target(s) in the final model: 'DELINQ_NEXT'
+- Type of model: Random Forrest
+- Software used to implement the model: Python Scikit-learn
+- Version of the modeling software: 0.22.2.post1
+- Hyperparameters or other setting of your model: DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
+                       max_depth=6, max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=None,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort='deprecated',
+                       random_state=12345, splitter='best')
+
+**Quantitative Analysis
+![](download.png)
+
+**Ethical considerations
+- Describe potential negative impacts of using the model:
+  - The model will not work effectively on Safari. User shall use Google Chrome.
+  - Real-world risks: even though this model framework is consistent this is for academic purpose. It cannot be use for real-world environment.
+- Describe potential uncertainties relating to the impacts of using your model:
+  - The outcome of using this model is striclty acamdeci. We will not guarantee an utilization outside of class demonstration. 
+  - Real-world risks: all users shall understand that this is an example of model. Nowhere this shall be considerated over his intended purpose.
+- Describe any unexpected or results: None
